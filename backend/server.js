@@ -1,22 +1,17 @@
-import { AssemblyAI } from 'assemblyai'
-import dotenv from 'dotenv'
+const express = require('express')
+const app = express()
+const port = 3000
 
-dotenv.config()
-
-const client = new AssemblyAI({
-  apiKey: process.env.ASSEMBLYAI_API_KEY
+app.get('/', (req, res) => {
+  res.send('Plat API')
 })
 
-const audioUrl =
-  'https://github.com/AssemblyAI-Examples/audio-examples/raw/main/20230607_me_canadian_wildfires.mp3'
+app.use('/flip', (req, res) => {
+  res.send('Flip API')
+})
 
-const params = {
-  audio: audioUrl
-}
+app.use('/transcribe', require('./routes/transcribe'))
 
-const run = async () => {
-  const transcript = await client.transcripts.transcribe(params)
-  console.log(transcript.text)
-}
-
-run()
+app.listen(port, () => {
+  console.log(`Plat API listening on port ${port}`)
+})
