@@ -7,6 +7,7 @@ const App = () => {
         <a>plat</a>
       </p>
       <button className=''>What's good</button>
+      <input></input>
     </div>
   )
 }
