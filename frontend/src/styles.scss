@@ -20,7 +20,7 @@ button:not(.no-styles) {
   padding: 4px 8px;
   background-color: white;
 
-  &:hover {
+  &:hover, &:focus {
     background-color: rgb(244, 245, 248);
     border-color: rgb(223, 225, 228);
   }
@@ -59,6 +59,7 @@ input:not(.no-styles) {
   background-color: white;
   
   transition: box-shadow .3s ease;
+
   &:focus {
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 4px 16px;

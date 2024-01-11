@@ -7,7 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#128DC4"
+        primary: "#128DC4",
+        primary_light: "#0CAED0",
+        primary_dark: "#186CB8",
+        outline: "rgb(223, 225, 228)"
       }
     },
   },
