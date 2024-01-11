@@ -50,5 +50,5 @@ After you do this, you should be running the app at `http://localhost:5173` and 
 12. Request for someone to review and merge your pull request. Linear will automatically update the status to `In Review`.
 13. After it has been merged, Linear will update the status of your issue to `Done`.
 
-Please note that direct changes made to the `main` branch are not allowed. Pull requests must be made and reviewed before changes are merged. If your programming does not follow the naming schemes listed above, it will not be merged.
+Please note that direct changes made to the `main` branch are not allowed. Pull requests must be made and reviewed before changes are merged. If your programming does not follow the naming schemes listed above, it will not be merged. **Please use the "Squash and merge" option always when merging pull requests.**
 ```
