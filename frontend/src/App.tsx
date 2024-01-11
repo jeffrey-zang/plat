@@ -4,7 +4,7 @@ const App = () => {
       <h1>Plat</h1>
       <p>
         what's up guys plat here 
-        <a>oh yeah</a>
+        <a>plat</a>
       </p>
       <button className=''>What's good</button>
     </div>
