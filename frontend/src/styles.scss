@@ -4,9 +4,10 @@ body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
   font-weight: 500;
+  box-sizing: border-box;
 }
 
-button {
+button:not(.no-styles) {
   font-size: 12px;
   border-radius: 4px;
   font-weight: 600;
@@ -18,14 +19,20 @@ button {
   padding: 4px 8px;
   background-color: white;
 
+  &:hover {
+    background-color: rgb(244, 245, 248);
+    border-color: rgb(223, 225, 228);
+  }
+
+  &.dotted {
+    border-style: dashed;
+  }
+
   transition: background-color .3s ease, border-color .3s ease, color .3s ease;
 }
 
-button:hover {
-  background-color: rgb(244, 245, 248);
-  border-color: rgb(223, 225, 228);
-}
-
-p {
-  margin: 0;
+a:not(.no-styles) {
+  color: #128DC4;
+  text-decoration: underline;
+  cursor: pointer;
 }
