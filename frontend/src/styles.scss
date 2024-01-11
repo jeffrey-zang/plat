@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+button:not(.no-styles) {
+  font-size: 12px;
+  user-select: none;
+  font-family: inherit;
+  border-radius: 4px;
+  font-weight: 600;
+  border: 1px solid rgb(223, 225, 228);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 4px;
+  color: rgb(60, 65, 73);
+  padding: 4px 8px;
+  background-color: white;
+
+  &:hover, &:focus {
+    background-color: rgb(244, 245, 248);
+    border-color: rgb(223, 225, 228);
+  }
+
+  &.dotted {
+    border-style: dashed;
+  }
+
+  transition: background-color .3s ease, border-color .3s ease, color .3s ease;
+}
+
+a:not(.no-styles) {
+  color: theme('colors.primary');
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+p {
+  font-size: 15px;
+
+  &.label {
+    font-size: 12px;
+    color: #777;
+  }
+}
+
+input:not(.no-styles) {
+  font-family: inherit;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid rgb(223, 225, 228);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 4px;
+  color: rgb(60, 65, 73);
+  padding: 8px;
+  background-color: white;
+  
+  transition: box-shadow .3s ease;
+
+  &:focus {
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 4px 16px;
+  }
+}
