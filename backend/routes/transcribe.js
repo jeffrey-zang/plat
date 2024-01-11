@@ -1,5 +1,6 @@
-import { AssemblyAI } from 'assemblyai'
-import dotenv from 'dotenv'
+const { AssemblyAI } = require('assemblyai')
+const dotenv = require('dotenv')
+const router = require('express').Router()
 
 dotenv.config()
 
@@ -18,3 +19,9 @@ const transcribe = async () => {
   const transcript = await client.transcripts.transcribe(params)
   console.log(transcript.text)
 }
+
+router.get('/', (req, res) => {
+  res.send('Transcribe')
+})
+
+module.exports = router;
