@@ -17,7 +17,7 @@ router.get('/', async (req, res) =>{
 
     const chatResponse = response.data.choices[0].text;
     res.json({ chatResponse });
-  } catch (error){
+  } catch (error) {
     console.log('ChatGPT generation failed: ', error.message);
     res.status(500).json({ error: 'ChatGPT generation failed'} )
   }
