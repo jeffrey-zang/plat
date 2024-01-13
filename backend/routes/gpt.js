@@ -6,7 +6,7 @@ dotenv.config()
 const openaiInstance = new openai(process.env.CHATGPT_API_KEY);
 
 router.get('/', async (req, res) =>{
-  try{
+  try {
     const prompt = "I love rythmHacks"
 
     const response = await openaiInstance.complete.create({
@@ -19,6 +19,6 @@ router.get('/', async (req, res) =>{
     res.json({ chatResponse });
   } catch (error){
     console.log('ChatGPT generation failed: ', error.message);
-    res.status(500).json({error: 'ChatGPT generation failed'})
+    res.status(500).json({ error: 'ChatGPT generation failed'} )
   }
 })
