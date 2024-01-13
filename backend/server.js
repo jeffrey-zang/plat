@@ -11,7 +11,8 @@ app.use('/flip', (req, res) => {
 })
 
 app.use('/transcribe', require('./routes/transcribe'))
+app.use('/gpt', require('./routes/gpt'))
 
 app.listen(port, () => {
-  console.log(`Plat API listening on port ${port}`)
+  console.log(`Plat API listening on http://localhost:${port}`)
 })
