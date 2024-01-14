@@ -1,5 +1,6 @@
 const openai = require('openai')
 const dotenv = require('dotenv')
+const router = require('express').Router()
 
 dotenv.config()
 
@@ -22,3 +23,5 @@ router.get('/', async (req, res) =>{
     res.status(500).json({ error: 'ChatGPT generation failed'} )
   }
 })
+
+module.exports = router;
