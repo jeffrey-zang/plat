@@ -3,11 +3,11 @@ const dotenv = require('dotenv')
 
 dotenv.config()
 
-const openaiInstance = new openai(process.env.CHATGPT_API_KEY);
+const openaiInstance = new openai(process.env.OPENAI_API_KEY);
 
 router.get('/', async (req, res) =>{
   try {
-    const prompt = "I love rythmHacks"
+    const prompt = "Create an elevator pitch for a new b2b startup called Plat that provides realtime feedback on pitches."
 
     const response = await openaiInstance.complete.create({
       engine: 'text-davinci-003', // This is the model of gpt, i dont know which one - jame
