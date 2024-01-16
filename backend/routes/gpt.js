@@ -1,24 +1,26 @@
-const openai = require('openai')
+const OpenAI = require('openai')
 const dotenv = require('dotenv')
+const router = require('express').Router()
 
 dotenv.config()
 
-const openaiInstance = new openai(process.env.CHATGPT_API_KEY);
+const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
 router.get('/', async (req, res) =>{
   try {
-    const prompt = "I love rythmHacks"
+    const prompt = "Create an elevator pitch for a new b2b startup called Plat that provides realtime feedback on pitches."
 
-    const response = await openaiInstance.complete.create({
-      engine: 'text-davinci-003', // This is the model of gpt, i dont know which one - jame
-      prompt,
-      max_tokens: 10 // change if needed
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-3.5-turbo',
+      messages: [{ role: 'user', content: prompt }],
     });
-
-    const chatResponse = response.data.choices[0].text;
+  
+    const chatResponse = completion.choices[0]?.message?.content;
     res.json({ chatResponse });
   } catch (error) {
-    console.log('ChatGPT generation failed: ', error.message);
+    console.log('\n\x1b[31mChatGPT generation failed: ', error.message, "\x1b[0m");
     res.status(500).json({ error: 'ChatGPT generation failed'} )
   }
 })
+
+module.exports = router;
