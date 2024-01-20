@@ -1,6 +1,9 @@
+import Navbar from "./components/Navbar/Navbar"
+
 const App = () => {
   return (
     <div>
+      <Navbar />
       <h1>Plat</h1>
       <p>
         what's up guys plat here 
