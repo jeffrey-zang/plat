@@ -38,7 +38,7 @@ After you do this, you should be running the app at `http://localhost:5173` and 
 3. Open your code editor and make your changes. Be sure to type `git pull` to sync your local changes.
 4. Open a terminal. 
 5. In the terminal, type `git checkout -b <branchname>` and replace `<branchname>` with the name copied from Linear. Referring to the example, it would be `git checkout -b pg-38-set-up-express`.
-6. Type `git add .`.
+6. Type `git add .`
 7. Type `git commit -m "<action>(<scope>): <message>"`. For my example, it might look something like `git commit -m "feat(be): set up express"`.
 - `<action>` can be one of the following: `feat` (feature), `fix` (fixed bug), `docs` (documentation), `style` (code styling), `refac` (code refactoring), `chore` (temporary thing/something that doesn't affect the user)
 - `<scope>` can be one of the following: `fe` (frontend), `be` (backend), `ai` (voice, NLP, etc.)
