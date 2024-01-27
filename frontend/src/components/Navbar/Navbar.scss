@@ -1,0 +1,12 @@
+.navlink {
+  &:not(&.active) {
+    &:hover, &:focus {
+      color: black;
+    }
+  }
+  &.active {
+    background-color: #e2e8f0;
+    color: #155e75;
+    font-weight: bold;
+  }
+}
