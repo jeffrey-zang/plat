@@ -47,6 +47,7 @@ After you do this, you should be running the app at `http://localhost:5173` and 
 9. Visit the GitHub repo.
 10. Click "Compare & pull request".
 11. Name the pull request "PG-<id> <description>" and replace `<id>` with the issue id on Linear and `<description>` with a short description of the issue. It should be the same as the branch name, but without the dashes and with a PG-<id> prefix. Linear should now automatically link the issue to your pull request. For my example, the pull request is named "PG-38 set up express".
+12. Make sure the target branch is `dev`, not `stage` or `main`.
 12. Request for someone to review and merge your pull request. Linear will automatically update the status to `In Review`.
 13. After it has been merged, Linear will update the status of your issue to `Done`.
 
