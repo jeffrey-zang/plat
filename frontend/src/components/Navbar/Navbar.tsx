@@ -16,7 +16,7 @@ const sections = [
     links: [
       {
         name: "Dashboard",
-        href: "/dashboard"
+        href: "/"
       }
     ]
   },
