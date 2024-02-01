@@ -47,8 +47,17 @@ After you do this, you should be running the app at `http://localhost:5173` and 
 9. Visit the GitHub repo.
 10. Click "Compare & pull request".
 11. Name the pull request "PG-<id> <description>" and replace `<id>` with the issue id on Linear and `<description>` with a short description of the issue. It should be the same as the branch name, but without the dashes and with a PG-<id> prefix. Linear should now automatically link the issue to your pull request. For my example, the pull request is named "PG-38 set up express".
+12. Make sure the target branch is `dev`, not `stage` or `main`.
 12. Request for someone to review and merge your pull request. Linear will automatically update the status to `In Review`.
 13. After it has been merged, Linear will update the status of your issue to `Done`.
 
+## CI/CD workflow
+- When making a pull request, always set the target branch to `dev`. This is the development branch.
+- Once we launch and have production users, we'll set a predetermined routine time to merge things from `dev` into `stage`. This can be a weekly or bi-weekly session where all of the involved stakeholders (dev, product, devops, cto) get together, create a pull request. Each session will occur at the end of the cycle indicated on Linear.
+  - The pull request should have the following naming scheme: `Cycle <cycle-number>: dev to stage` replacing <cycle-number> with the number indicated on Linear.
+- The `stage` branch exists as padding to avoid pushing bugs to `production`. It should be an exact mimic of the public-facing production deployments. The `stage` deployment can be used by internal team members as a way to demo the product to customers or to identify issues and fixes. The `dev` branch is not cleaned up, may be unstable, and may experience large changes day-to-day, which is why it may not be ideal for demos.
+- After `stage` has been reviewed and we've confirmed that there won't be any issues in production, create another pull request and push to the `main` branch.
+  - The pull request should have the following naming scheme: `Cycle <cycle-number>: stage to main` replacing <cycle-number> with the number indicated on Linear.
+- Ping the #dev channel on Discord to let everyone know that the production deployment has been updated.
+
 Please note that direct changes made to the `main` branch are not allowed. Pull requests must be made and reviewed before changes are merged. If your programming does not follow the naming schemes listed above, it will not be merged. **Please use the "Squash and merge" option always when merging pull requests.**
-```
