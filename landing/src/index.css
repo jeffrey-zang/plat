@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  background-image: radial-gradient(#aaa 1px, transparent 0);
+  background-size: 40px 40px;
+  background-color: #f1f5f9;
+  background-position: -19px ;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
